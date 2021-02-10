@@ -37,42 +37,42 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transaction> _userTransactions = [
-    Transaction(
-      id: 'otfghjkl;',
-      title: 'some transaction title 1',
-      amount: 25.25,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 'hnkyuuimu;',
-      title: 'some transaction title 2',
-      amount: 85.25,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 'vgrvgtg;',
-      title: 'some transaction title 3',
-      amount: 34.25,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 'vgrvgtg;',
-      title: 'some transaction title 4',
-      amount: 34.25,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 'vgrvgtg;',
-      title: 'some transaction title 5',
-      amount: 34.25,
-      date: DateTime.now(),
-    ),
-    Transaction(
-      id: 'vgrvgtg;',
-      title: 'some transaction title 6',
-      amount: 34.25,
-      date: DateTime.now(),
-    )
+    // Transaction(
+    //   id: 'otfghjkl;',
+    //   title: 'some transaction title 1',
+    //   amount: 25.25,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 'hnkyuuimu;',
+    //   title: 'some transaction title 2',
+    //   amount: 85.25,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 'vgrvgtg;',
+    //   title: 'some transaction title 3',
+    //   amount: 34.25,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 'vgrvgtg;',
+    //   title: 'some transaction title 4',
+    //   amount: 34.25,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 'vgrvgtg;',
+    //   title: 'some transaction title 5',
+    //   amount: 34.25,
+    //   date: DateTime.now(),
+    // ),
+    // Transaction(
+    //   id: 'vgrvgtg;',
+    //   title: 'some transaction title 6',
+    //   amount: 34.25,
+    //   date: DateTime.now(),
+    // )
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
