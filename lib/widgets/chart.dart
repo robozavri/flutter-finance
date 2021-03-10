@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_finance/models/transaction.dart';
+import 'package:flutter_finance/widgets/chart_bar.dart';
 import 'package:intl/intl.dart';
 
 class Chart extends StatelessWidget {
@@ -21,9 +22,15 @@ class Chart extends StatelessWidget {
           totalSum += recentTransactions[i].amount;
         }
       }
-      print(DateFormat.E(weekDay));
+      print(DateFormat.E().format(weekDay));
       print(totalSum);
-      return {'day': DateFormat.E(weekDay), 'amount': totalSum};
+      return {'day': DateFormat.E().format(weekDay), 'amount': totalSum};
+    });
+  }
+
+  double get totalSpending {
+    return groupedTransactionValues.fold(0.1, (sum, item) {
+      return sum + item['amount'];
     });
   }
 
@@ -33,7 +40,13 @@ class Chart extends StatelessWidget {
       elevation: 6,
       margin: EdgeInsets.all(20),
       child: Row(
-        children: <Widget>[],
+        // children: <Widget>[],
+        children: groupedTransactionValues.map((data) {
+          print(totalSpending);
+          return ChartBar(data['day'], data['amount'],
+              (data['amount'] as double) / totalSpending);
+          // return Text('${data['day']} : ${data['amount']}');
+        }).toList(),
       ),
     );
   }

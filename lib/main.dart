@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import './widgets/new_transaction.dart';
 import './widgets/transaction_list.dart';
 import './models/transaction.dart';
+import './widgets/chart.dart';
 
 void main() => runApp(MyApp());
 
@@ -114,19 +115,21 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
         body: SingleChildScrollView(
-          child: Column(
+          child: Flexible(
+              child: Column(
             children: <Widget>[
               Container(
                 width: double.infinity,
                 child: Card(
                   color: Colors.blue,
-                  child: Text('CHART!'),
-                  elevation: 5,
+                  // child: Text('CHART!'),
+                  child: Chart(_userTransactions),
+                  elevation: 1,
                 ),
               ),
               TransactionList(_userTransactions)
             ],
-          ),
+          )),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: FloatingActionButton(
